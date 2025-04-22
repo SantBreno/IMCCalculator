@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IMCCalculator</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="hello_world">Hello World</string>
+    <string name="text">text</string>
+    <string name="imc">IMC</string>
+    <string name="input_weight">Your weight in kilograms</string>
+    <string name="calculate_btn">Calculate</string>
+    <string name="height_input">Your height in meters</string>
+</resources>
