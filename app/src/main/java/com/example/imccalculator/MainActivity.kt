@@ -11,7 +11,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.OutlinedTextField
-
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.tooling.preview.Preview
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +33,8 @@ fun IMCApp() {
         modifier = Modifier
             .fillMaxSize()
             .padding(24.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text("IMC Calculator", fontSize = 24.sp)
 
@@ -64,4 +66,10 @@ fun IMCApp() {
 
         Text(result, fontSize = 20.sp)
     }
+}
+
+@Preview(showBackground = true, name = "IMC Preview")
+@Composable
+fun IMCAppPreview() {
+    IMCApp()
 }
