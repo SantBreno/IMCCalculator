@@ -51,18 +51,25 @@ fun IMCApp() {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text("IMC Calculator", fontSize = 24.sp)
+                Text("IMC Calculator",
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(0xFF1565C0),
+                    textAlign = TextAlign.Center
+                )
 
                 OutlinedTextField(
                     value = weight,
                     onValueChange = { weight = it },
-                    label = { Text("Type your weight (kg)") }
+                    label = { Text("Type your weight (kg)") },
+                    singleLine = true
                 )
 
                 OutlinedTextField(
                     value = height,
                     onValueChange = { height = it },
-                    label = { Text("Type your Height (cm)") }
+                    label = { Text("Type your Height (cm)") },
+                    singleLine = true
                 )
 
                 Button(onClick = {
@@ -75,11 +82,19 @@ fun IMCApp() {
                     } else {
                         result = "Please enter a valid input."
                     }
-                }) {
-                    Text("Calculate IMC")
+                },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1976D2))
+                ) {
+                    Text("Calculate IMC", color = Color.White)
                 }
 
-                Text(result, fontSize = 20.sp)
+                Text(
+                    result,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = Color(0xFF0D47A1),
+                    textAlign = TextAlign.Center
+                )
             }
 
         }
